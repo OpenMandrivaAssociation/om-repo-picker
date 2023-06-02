@@ -6,6 +6,7 @@ License:	GPLv2
 Group:		System/Configuration/Other
 URL:		https://github.com/OpenMandrivaSoftware/om-repo-picker
 Source0:	https://github.com/OpenMandrivaSoftware/om-repo-picker/archive/%{version}/%{name}-%{version}.tar.gz
+Patch0:  testing.patch
 Requires:	openmandriva-repos >= 4.0-1
 Requires:	dnf
 Requires:	dnf-command(config-manager)
