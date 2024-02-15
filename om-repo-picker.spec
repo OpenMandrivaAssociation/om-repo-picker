@@ -9,7 +9,7 @@ Source0:	https://github.com/OpenMandrivaSoftware/om-repo-picker/archive/refs/tag
 Requires:	openmandriva-repos >= 4.0-1
 Requires:	dnf
 Requires:	dnf-command(config-manager)
-BuildRequires:	cmake cmake(ECM) ninja cmake(Qt6Core) cmake(Qt6Gui) cmake(Qt6Widgets)
+BuildRequires:	cmake cmake(ECM) ninja cmake(Qt6Core) cmake(Qt6Gui) cmake(Qt6Widgets) cmake(Qt6LinguistTools)
 
 %description
 OpenMandriva Lx package repository selector.
