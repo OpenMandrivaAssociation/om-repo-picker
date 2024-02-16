@@ -1,5 +1,5 @@
 Name:		om-repo-picker
-Version:	1.3.2
+Version:	1.3.3
 Release:	1
 Summary:	OpenMandriva Lx package repository selector
 License:	GPLv2
@@ -9,6 +9,8 @@ Source0:	https://github.com/OpenMandrivaSoftware/om-repo-picker/archive/refs/tag
 Requires:	openmandriva-repos >= 4.0-1
 Requires:	dnf
 Requires:	dnf-command(config-manager)
+# More precisely: pkexec
+Requires:	polkit
 BuildRequires:	cmake cmake(ECM) ninja cmake(Qt6Core) cmake(Qt6Gui) cmake(Qt6Widgets) cmake(Qt6LinguistTools)
 
 %description
