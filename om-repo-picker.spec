@@ -1,5 +1,5 @@
 Name:		om-repo-picker
-Version:	1.3.4
+Version:	1.3.5
 Release:	1
 Summary:	OpenMandriva Lx package repository selector
 License:	GPLv2
