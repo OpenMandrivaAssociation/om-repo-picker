@@ -11,22 +11,26 @@ Requires:	dnf
 Requires:	dnf-command(config-manager)
 # More precisely: pkexec
 Requires:	polkit
-BuildRequires:	cmake cmake(ECM) ninja cmake(Qt6Core) cmake(Qt6Gui) cmake(Qt6Widgets) cmake(Qt6LinguistTools)
+Requires:	%{name}-cli = %{EVRD}
+BuildRequires:	cmake(ECM) cmake(Qt6Core) cmake(Qt6Gui) cmake(Qt6Widgets) cmake(Qt6LinguistTools)
+BuildSystem:	cmake
 
 %description
 OpenMandriva Lx package repository selector.
 
-%prep
-%autosetup -p1
-%cmake -G Ninja
+%package cli
+Summary:	Command line tools to work with OpenMandriva repositories
+Group:		System/Configuration/Other
+Requires:	dnf >= 5.0
 
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
+%description cli
+Command line tools to work with OpenMandriva repositories
 
 %files
 %{_bindir}/om-repo-picker
 %{_datadir}/icons/hicolor/scalable/apps/om-repopicker.svg
 %{_datadir}/applications/*.desktop
+
+%files cli
+%{_bindir}/enable-repo
+%{_bindir}/disable-repo
